@@ -1,0 +1,107 @@
+/* Set height of html and body to 100% */
+html,
+body {
+  height: 100%;
+}
+
+/* Center content vertically and horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  /* Apply linear gradient background */
+  background: linear-gradient(120deg, #58615b 0%, #99b2bf 100%);
+}
+
+/* Container styling */
+.container {
+  width: 400px;
+  text-align: center;
+}
+
+/* Remove default list styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Margin bottom for list items */
+li {
+  margin-bottom: 8px;
+}
+
+/* Margin bottom for task input */
+.task-input {
+  margin-bottom: 16px;
+}
+
+/* Ensure long task names wrap */
+.task-item {
+  overflow-wrap: break-word;
+}
+
+/* Task Checkbox styling */
+.task-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+/* Custom checkbox styling */
+.task-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* Custom checkbox styling when checked */
+.task-checkbox input[type="checkbox"]:checked + .checkbox-label {
+  background-color: #43bc67; /* Change background color */
+}
+
+/* Styling for checkbox check mark */
+.task-checkbox input[type="checkbox"]:checked + .checkbox-label::after {
+  content: "\2713";
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Styling for checkbox label */
+.checkbox-label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Task content styling */
+.task-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+/* Task text styling */
+.task-text {
+  flex-grow: 1;
+  overflow-wrap: break-word;
+}
+
+/* Styling for completed tasks */
+.task-text.completed {
+  text-decoration: line-through; /* Add line-through for completed tasks */
+}
+
+/* Task actions styling */
+.task-actions {
+  flex-shrink: 0;
+}
